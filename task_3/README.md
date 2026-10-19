@@ -1,4 +1,3 @@
-@"
 # Tugas Individu 3 - Pemrograman Web
 
 Nama  : Eka Putri
@@ -14,9 +13,7 @@ dan halaman detail pendaftar (data dummy). Data dikirim lewat query string.
 - detail.html      : halaman detail pendaftar
 - style.css        : styling untuk kedua halaman
 - FormPendaftaran.png, DetailPendaftaran.png : screenshot tampilan halaman
-"@ | Set-Content -Encoding utf8 D:\task_3\README.md
 
-@"
 
 ## Screenshot
 
@@ -25,4 +22,3 @@ dan halaman detail pendaftar (data dummy). Data dikirim lewat query string.
 
 ### Halaman Detail Pendaftar
 ![Halaman Detail Pendaftar](DetailPendaftaran.png)
-"@ | Add-Content -Encoding utf8 D:\task_3\README.md
