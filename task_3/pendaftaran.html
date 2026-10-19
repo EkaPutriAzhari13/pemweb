@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Pendaftaran</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Form Pendaftaran</h1>
+
+    <form method="get" action="detail.html">
+      <fieldset>
+        <legend>Data Pendaftar</legend>
+
+        <div class="form-group">
+          <label for="nama">Nama Lengkap:</label>
+          <input type="text" id="nama" name="nama" placeholder="Masukkan nama" required>
+        </div>
+
+        <div class="form-group">
+          <label for="nim">NIM:</label>
+          <input type="text" id="nim" name="nim" placeholder="Masukkan NIM" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" placeholder="contoh@email.com" required>
+        </div>
+
+        <div class="form-group">
+          <label for="tgl">Tanggal Lahir:</label>
+          <input type="date" id="tgl" name="tgl">
+        </div>
+
+        <div class="form-group">
+          <label>Jenis Kelamin:</label>
+          <input type="radio" id="male" name="gender" value="Laki-laki">
+          <label for="male">Laki-laki</label>
+          <input type="radio" id="female" name="gender" value="Perempuan">
+          <label for="female">Perempuan</label>
+        </div>
+
+        <div class="form-group">
+          <label for="prodi">Program Studi:</label>
+          <select id="prodi" name="prodi">
+            <option value="">Pilih Prodi</option>
+            <option value="Informatika">Informatika</option>
+            <option value="Sistem Informasi">Sistem Informasi</option>
+            <option value="Teknik Elektro">Teknik Elektro</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Hobi:</label>
+          <input type="checkbox" name="hobi" value="Coding"> Coding
+          <input type="checkbox" name="hobi" value="Musik"> Musik
+          <input type="checkbox" name="hobi" value="Olahraga"> Olahraga
+        </div>
+
+        <div class="form-group">
+          <label for="alamat">Alamat:</label>
+          <textarea id="alamat" name="alamat" placeholder="Masukkan alamat"></textarea>
+        </div>
+
+        <input type="submit" value="Daftar">
+      </fieldset>
+    </form>
+  </div>
+</body>
+</html>

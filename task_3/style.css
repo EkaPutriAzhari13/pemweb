@@ -1,0 +1,207 @@
+/* ===== PALET WARNA ===== */
+:root {
+  --plum: #6b2d5c;
+  --plum-gelap: #4a1d40;
+  --rose: #d98a9f;
+  --rose-muda: #f6dde3;
+  --krem: #fff7f3;
+  --emas: #c9a227;
+  --teks: #3d2a35;
+}
+
+/* ===== LAYOUT ===== */
+body {
+  font-family: Georgia, "Times New Roman", serif;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(217, 138, 159, 0.55), transparent 45%),
+    radial-gradient(circle at 85% 80%, rgba(107, 45, 92, 0.6), transparent 50%),
+    var(--krem);
+  min-height: 100vh;
+  margin: 0;
+  padding: 40px 20px;
+  color: var(--teks);
+}
+
+/* ===== BOX ===== */
+.container {
+  max-width: 620px;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.92);
+  padding: 36px;
+  border-radius: 20px;
+  box-shadow: 0 20px 45px rgba(74, 29, 64, 0.3);
+  border: 1px solid var(--rose-muda);
+  position: relative;
+}
+
+/* garis emas tipis di atas kotak */
+.container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 10%;
+  width: 80%;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, var(--emas), transparent);
+}
+
+h1 {
+  text-align: center;
+  color: var(--plum);
+  font-weight: normal;
+  font-size: 30px;
+  letter-spacing: 1.5px;
+  margin-top: 0;
+  margin-bottom: 26px;
+}
+
+/* ===== FORM ===== */
+fieldset {
+  border: 1px solid var(--rose);
+  border-radius: 14px;
+  padding: 22px;
+  background-color: var(--krem);
+}
+
+legend {
+  color: var(--plum);
+  font-style: italic;
+  font-size: 16px;
+  padding: 0 12px;
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+label {
+  display: inline-block;
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-bottom: 6px;
+  color: var(--plum);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+select,
+textarea {
+  width: 100%;
+  padding: 11px 14px;
+  border: 1px solid #e5c4cd;
+  border-bottom: 2px solid var(--rose);
+  border-radius: 10px;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 14px;
+  background-color: white;
+  color: var(--teks);
+  transition: all 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="date"]:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--plum);
+  background-color: #fffafb;
+  box-shadow: 0 6px 16px rgba(107, 45, 92, 0.18);
+}
+
+textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+/* radio dan checkbox */
+input[type="radio"],
+input[type="checkbox"] {
+  accent-color: var(--plum);
+  margin-left: 10px;
+  transform: scale(1.15);
+}
+
+.form-group input + label {
+  text-transform: none;
+  letter-spacing: 0;
+  font-weight: normal;
+  font-size: 14px;
+  color: var(--teks);
+}
+
+/* tombol */
+input[type="submit"],
+.btn {
+  background: linear-gradient(135deg, var(--plum), var(--rose));
+  color: white;
+  border: none;
+  padding: 13px 34px;
+  border-radius: 30px;
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  box-shadow: 0 6px 16px rgba(107, 45, 92, 0.4);
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+input[type="submit"]:hover,
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 24px rgba(107, 45, 92, 0.5);
+}
+
+/* ===== TABEL ===== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 24px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(107, 45, 92, 0.15);
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+caption {
+  text-align: left;
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-size: 17px;
+  padding: 8px 0 12px;
+  color: var(--plum);
+}
+
+th, td {
+  padding: 13px 16px;
+  text-align: left;
+}
+
+th {
+  background: linear-gradient(135deg, var(--plum-gelap), var(--plum));
+  color: white;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+td {
+  border-bottom: 1px solid var(--rose-muda);
+}
+
+tbody tr:nth-child(even) {
+  background-color: var(--krem);
+}
+
+tbody tr:hover {
+  background-color: var(--rose-muda);
+  transition: background-color 0.3s;
+}
